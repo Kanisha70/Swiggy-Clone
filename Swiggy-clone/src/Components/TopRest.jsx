@@ -35,9 +35,9 @@ function TopRest() {
     const visibleCards = data.slice(startIndex, startIndex + cardsPerPage);
 
     return (
-        <div className='max-w-[1200px] mx-auto'>
+        <div className='max-w-[1200px] mx-auto px-4'>
             <div className='flex my-3 items-center justify-between'>
-                <div className='text-[25px] font-bold'>Top Restaurants in Deoghar</div>
+                <div className='md:text-3xl text-lg font-bold'>Top Restaurants in Deoghar</div>
                 <div className='flex'>
                     <div
                         onClick={prevSlide}
@@ -60,7 +60,7 @@ function TopRest() {
 
             <div className='flex gap-4 overflow-hidden transition-all duration-300'>
                 {visibleCards.map((d, i) => (
-                    <Card {...d} key={i} />
+                    <Card width="w-full md:w-[273px]" {...d} key={i} />
                 ))}
             </div>
         </div>

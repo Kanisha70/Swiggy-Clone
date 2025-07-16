@@ -44,9 +44,9 @@ function OnlineDelivery() {
     }, []);
 
     return (
-        <div className='max-w-[1200px] mx-auto mb-[100px]'>
+        <div className='max-w-[1200px] mx-auto mb-[100px] px-2'>
             <div className='flex my-5 items-center justify-between'>
-                <div className='text-[25px] font-bold'>
+                <div className='md:text-3xl text-lg  font-bold'>
                     Restaurants with online food delivery in Deoghar
                 </div>
             </div>
@@ -61,7 +61,7 @@ function OnlineDelivery() {
                 <div>Sort By</div>
             </div>
 
-            <div className='grid grid-cols-4 gap-3 mt-20'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
                 {data.map((d, i) => (
                     <Card {...d} key={i} />
                 ))}

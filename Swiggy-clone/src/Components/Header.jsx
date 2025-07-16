@@ -47,7 +47,8 @@ export default function Header() {
         onClick={hideSideMenu}
         style={{
           opacity: toggle ? 1 : 0,
-          visibility: toggle ? "visible" : "hidden"
+          visibility: toggle ? "visible" : "hidden",
+          zIndex:99999999
         }}
       >
         <div
@@ -74,7 +75,7 @@ export default function Header() {
               onClick={showSideMenu}
             />
           </div>
-          <nav className='flex list-none gap-5 ml-auto font-semibold text-[18px]'>
+          <nav className='hidden md:flex list-none gap-5 ml-auto font-semibold text-[18px]'>
             {
               links.map((link, index) => (
                 <li key={index} className='flex hover:text-[#fc8019] items-center gap-2'>
